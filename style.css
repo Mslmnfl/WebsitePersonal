@@ -1,4 +1,116 @@
-/* Untuk layar kecil seperti HP */
+/* Global Styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: transparent;
+  color: #fff;
+  overflow: hidden; /* Mencegah scroll pada halaman */
+  height: 100vh; /* Membatasi tinggi halaman ke viewport */
+}
+
+/* Header Styles */
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between; /* Logo kiri, nav kanan */
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0); /* Transparan */
+  padding: 20px 5px;
+  color: white;
+  box-sizing: border-box;
+}
+
+/* Logo */
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin-left: 10px; /* Tambahkan jarak dari tepi kiri */
+}
+
+/* Nav */
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 0px;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+  text-transform: uppercase;
+  font-size: 14px;
+  display: inline-block;
+  box-sizing: border-box;
+}
+
+/* Hero Section Styles */
+.hero {
+  position: relative;
+  background-image: url("hero.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.907);
+  z-index: 1;
+}
+
+.hero * {
+  position: relative;
+  z-index: 2;
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 18px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Footer Styles */
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0);
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+  color: #aaa;
+}
+
+/* Responsiveness for Mobile Devices */
 @media (max-width: 768px) {
   header {
     flex-direction: column;

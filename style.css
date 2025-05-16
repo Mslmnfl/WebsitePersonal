@@ -4,13 +4,15 @@ body {
   font-family: Arial, sans-serif;
   background-color: #00000000;
   color: #fff;
-  overflow: hidden; /* Mencegah scroll pada halaman */
-  height: 100vh; /* Membatasi tinggi halaman ke viewport */
+  overflow-x: hidden; /* BUKAN 'hidden' semua arah */
+  height: 100%;
+  width: 100%;
 }
+
 
 /* Header Styles */
 header {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
